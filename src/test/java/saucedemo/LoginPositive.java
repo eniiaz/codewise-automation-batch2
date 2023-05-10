@@ -35,6 +35,5 @@ public class LoginPositive {
         driver.findElement(By.linkText("Sauce Labs Fleece Jacket")).click();
         Thread.sleep(500);
         driver.navigate().back();
-
     }
 }
