@@ -10,6 +10,7 @@ import java.util.List;
 public class Products {
 
     public static void main(String[] args) {
+        System.out.println("Program start");
         String usernameData = "problem_user";
         String passwordData = "secret_sauce";
         WebDriver driver = new ChromeDriver();
