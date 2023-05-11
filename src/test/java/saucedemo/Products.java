@@ -10,6 +10,7 @@ import java.util.List;
 public class Products {
 
     public static void main(String[] args) {
+        System.out.println("Program start");
         String usernameData = "problem_user";
         String passwordData = "secret_sauce";
         WebDriver driver = new ChromeDriver();
@@ -34,12 +35,11 @@ public class Products {
         int quantityInt = Integer.parseInt(itemQuantity);
         System.out.println(quantityInt);
         System.out.println(addToCartButtons.size());
+        System.out.println("To Check");
         if (quantityInt == addToCartButtons.size()){
             System.out.println("Passed");
         }else {
             System.out.println("Failed");
         }
-
-
     }
 }
