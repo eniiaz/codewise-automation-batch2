@@ -34,12 +34,11 @@ public class Products {
         int quantityInt = Integer.parseInt(itemQuantity);
         System.out.println(quantityInt);
         System.out.println(addToCartButtons.size());
+        System.out.println("To Check");
         if (quantityInt == addToCartButtons.size()){
             System.out.println("Passed");
         }else {
             System.out.println("Failed");
         }
-
-
     }
 }
