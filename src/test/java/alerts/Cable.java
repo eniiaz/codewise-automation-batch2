@@ -24,7 +24,5 @@ public class Cable {
         alert.accept();
         Thread.sleep(1000);
         driver.findElement(By.id("male")).click();
-
-
     }
 }
