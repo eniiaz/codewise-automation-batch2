@@ -15,8 +15,8 @@ public class FindFlights {
         driver.get("https://www.blazedemo.com/reserve.php");
         driver.manage().window().maximize();
 
-        for (WebElement flight: findFlights(200, 400)){
-            System.out.println(flight.getText());
+        for (WebElement flight: findFlights(300, 500)){
+            printFlightInfo(flight.getText());
         }
     }
 
@@ -33,6 +33,23 @@ public class FindFlights {
             }
         }
         return result;
+    }
+
+    public static void printFlightInfo(String flightNumber){
+        String xpathAirline = "//tbody/tr/td[.='"+ flightNumber + "']/../td[3]";
+        String xpathDeparture = "//tbody/tr/td[.='"+ flightNumber + "']/../td[4]";
+        String xpathArrival = "//tbody/tr/td[.='"+ flightNumber + "']/../td[5]";
+        String xpathPrice = "//tbody/tr/td[.='"+ flightNumber + "']/../td[6]";
+        System.out.println("\nFlight Info for: " + flightNumber);
+        String airline = driver.findElement(By.xpath(xpathAirline)).getText();
+        String departure = driver.findElement(By.xpath(xpathDeparture)).getText();
+        String arrival = driver.findElement(By.xpath(xpathArrival)).getText();
+        String price = driver.findElement(By.xpath(xpathPrice)).getText();
+
+        System.out.println("Airline: " + airline);
+        System.out.println("Departure: " + departure);
+        System.out.println("Arrival: " + arrival);
+        System.out.println("Price: " + price);
     }
 
 }
