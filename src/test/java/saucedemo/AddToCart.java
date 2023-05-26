@@ -13,6 +13,7 @@ public class AddToCart {
         WebDriver driver = new ChromeDriver();
         driver.get("https://saucedemo.com");
         driver.manage().window().maximize();
+
         WebElement username = driver.findElement(By.xpath("//input[@id='user-name']"));
         WebElement password = driver.findElement(By.xpath("//input[@id='password']"));
         WebElement loginBtn = driver.findElement(By.xpath("//*[@name='login-button']"));
