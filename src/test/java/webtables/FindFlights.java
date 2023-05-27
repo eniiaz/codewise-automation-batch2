@@ -4,13 +4,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class FindFlights {
+
+
     static WebDriver driver;
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+
         driver = new ChromeDriver();
         driver.get("https://www.blazedemo.com/reserve.php");
         driver.manage().window().maximize();
