@@ -9,6 +9,8 @@ import org.openqa.selenium.interactions.Actions;
 public class Drop {
 
     public static void main(String[] args) throws InterruptedException {
+
+
         WebDriver driver = new ChromeDriver();
         driver.get("https://artoftesting.com/sampleSiteForSelenium");
         driver.manage().window().maximize();
