@@ -22,6 +22,5 @@ public class FakeData {
         System.out.println(userID.getText());
         System.out.println(password.getText());
 
-
     }
 }
