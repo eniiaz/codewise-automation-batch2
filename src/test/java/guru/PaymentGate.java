@@ -24,5 +24,21 @@ public class PaymentGate {
             System.out.println("Credit Card Validation FAILED");
         }
 
+        String cvvString = cvv.getText().substring(6).trim();
+        if (cvvString.length() == 3){
+            System.out.println("CVV length validation PASSED");
+        }else{
+            System.out.println("CVV Length validation FAILED");
+        }
+
+        String creditLimit = limit.getText().substring(13).trim();
+        if (creditLimit.equals("$100.00")){
+            System.out.println("Credit limit PASSED");
+        }else{
+            System.out.println("Credit limit FAILED");
+        }
+
+        Driver.quit();
+
     }
 }
